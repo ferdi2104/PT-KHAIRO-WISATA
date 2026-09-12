@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Pusat Bantuan Jamaah | KHAIRO TOURS & TRAVELS</title>
+    <meta name="description"
+        content="Pertanyaan yang sering ditanyakan seputar Umroh & Haji bersama KHAIRO TOURS & TRAVELS — legalitas, paket & harga, dokumen & syarat, keberangkatan, dan cara pendaftaran.">
+    <meta name="keywords" content="FAQ umroh, syarat umroh, dokumen umroh, DP umroh, visa umroh, khairo tours, travel umroh">
+    <meta name="author" content="KHAIRO TOURS & TRAVELS - Lina Mardiyana">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ — Pusat Bantuan Jamaah | KHAIRO TOURS & TRAVELS">
+    <meta property="og:description" content="Semua yang perlu Anda ketahui seputar umroh dan haji bersama KHAIRO TOURS & TRAVELS.">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apa itu KHAIRO TOURS & TRAVELS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KHAIRO TOURS & TRAVELS adalah biro perjalanan ibadah resmi yang bergerak di bidang Umroh dan Haji Plus, di bawah naungan PT. Khairo Wisata. Kami telah memberangkatkan ribuan jamaah ke Tanah Suci dengan pelayanan amanah dan berkualitas."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo-khairo.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+    <!-- ====== Page Loader ====== -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Khairo Tours</div>
+    </div>
+
+    <!-- ====== Navigation ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand" id="navBrand">
+                <img src="images/logo-khairo.png" alt="Logo KHAIRO TOURS & TRAVELS">
+                <div class="nav-brand-text">
+                    <h1>KHAIRO TOURS & TRAVELS</h1>
+                    <span>Haji Plus & Umroh</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Layanan</a>
+                <a href="packages.html">Paket</a>
+                <a href="airlines.html">Maskapai</a>
+                <a href="hotels.html">Hotel</a>
+                <a href="gallery.html">Galeri</a>
+                <a href="testimonials.html">Testimoni</a>
+                <a href="faq.html" class="active">FAQ</a>
+                <a href="contact.html" class="nav-cta"><i class="fab fa-whatsapp"></i> Hubungi Agen</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ====== FAQ Page ====== -->
+    <div class="faq-page">
+
+        <!-- ====== Hero ====== -->
+        <section class="faq-hero">
+            <div class="container">
+                <span class="faq-eyebrow"><i class="fas fa-circle-question"></i> Pertanyaan Umum</span>
+                <h1 class="faq-title">Pusat Bantuan <span class="text-gold">Jamaah</span></h1>
+                <p class="faq-lead">
+                    Semua yang perlu Anda ketahui — legalitas, paket &amp; harga, dokumen &amp; syarat,
+                    hingga cara pendaftaran. Tidak menemukan jawaban? Agen kami siap membantu.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="faq-search">
+                    <span class="faq-search__icon"><i class="fas fa-search"></i></span>
+                    <label for="faq-cari" class="visually-hidden">Cari pertanyaan</label>
+                    <input
+                        id="faq-cari"
+                        type="search"
+                        class="faq-search__input"
+                        placeholder="Cari pertanyaan… (mis. paspor, DP, mahram)"
+                        autocomplete="off"
+                    >
+                    <button type="button" class="faq-search__clear" id="searchClear" aria-label="Hapus pencarian">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Content Area ====== -->
+        <section class="faq-content-area">
+            <div class="container">
+
+                <!-- Category Chips -->
+                <div class="faq-chips" role="group" aria-label="Saring pertanyaan menurut kategori">
+                    <button type="button" class="faq-chip is-active" data-kat="all" aria-pressed="true">
+                        <i class="fas fa-border-all"></i>
+                        <span>Semua</span>
+                        <span class="faq-chip__count">30</span>
+                    </button>
+                    <button type="button" class="faq-chip" data-kat="umum-legalitas" aria-pressed="false">
+                        <i class="fas fa-circle-info"></i>
+                        <span>Umum & Legalitas</span>
+                        <span class="faq-chip__count">6</span>
+                    </button>
+                    <button type="button" class="faq-chip" data-kat="pendaftaran-pembayaran" aria-pressed="false">
+                        <i class="fas fa-ticket"></i>
+                        <span>Pendaftaran & Pembayaran</span>
+                        <span class="faq-chip__count">7</span>
+                    </button>
+                    <button type="button" class="faq-chip" data-kat="dokumen-persyaratan" aria-pressed="false">
+                        <i class="fas fa-file-lines"></i>
+                        <span>Dokumen & Persyaratan</span>
+                        <span class="faq-chip__count">6</span>
+                    </button>
+                    <button type="button" class="faq-chip" data-kat="paket-fasilitas" aria-pressed="false">
+                        <i class="fas fa-gift"></i>
+                        <span>Paket & Fasilitas</span>
+                        <span class="faq-chip__count">5</span>
+                    </button>
+                    <button type="button" class="faq-chip" data-kat="keberangkatan-ibadah" aria-pressed="false">
+                        <i class="fas fa-plane"></i>
+                        <span>Keberangkatan & Ibadah</span>
+                        <span class="faq-chip__count">6</span>
+                    </button>
+                </div>
+
+                <!-- FAQ Grid -->
+                <div class="faq-grid" id="faqGrid">
+
+                    <!-- ===== UMUM & LEGALITAS ===== -->
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="apa itu khairo tours travels biro perjalanan ibadah resmi umroh haji pt khairo wisata">
+                        <summary class="faq-item__q">
+                            <span>Apa itu KHAIRO TOURS & TRAVELS?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>KHAIRO TOURS & TRAVELS adalah biro perjalanan ibadah resmi yang bergerak di bidang <strong>Umroh dan Haji Plus</strong>, di bawah naungan <strong>PT. Khairo Wisata</strong>.</p>
+                            <p>Kami telah memberangkatkan ribuan jamaah ke Tanah Suci dengan pelayanan yang amanah, nyaman, dan berkualitas sejak bertahun-tahun.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="apakah khairo tours travel resmi berizin ppiu kemenag sk izin legal">
+                        <summary class="faq-item__q">
+                            <span>Apakah KHAIRO TOURS & TRAVELS travel resmi dan berizin?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. KHAIRO TOURS & TRAVELS terdaftar sebagai badan usaha resmi dengan nama <strong>PT. Khairo Wisata</strong> dan memegang izin Kementerian Agama Republik Indonesia sebagai Penyelenggara Perjalanan Ibadah Umrah (PPIU).</p>
+                            <p>Nomor izin: <strong>SK PPIU No. 1153/2019</strong>. Kami juga terdaftar sebagai anggota <strong>AMPHURI</strong> (Asosiasi Muslim Penyelenggara Haji dan Umroh Republik Indonesia).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="apa yang membedakan khairo tours dengan travel umroh lain keunggulan">
+                        <summary class="faq-item__q">
+                            <span>Apa yang membedakan Khairo Tours dengan travel umroh lain?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Keunggulan kami:</p>
+                            <ul>
+                                <li>Pembimbing ibadah dan muthawwif <strong>berpengalaman</strong> mendampingi dari manasik hingga kepulangan</li>
+                                <li>Hotel <strong>bintang 4 & 5</strong> dekat Masjidil Haram dan Masjid Nabawi</li>
+                                <li>Tersedia paket umroh plus dengan destinasi Thaif, Turki, dan lainnya</li>
+                                <li>Fasilitas lengkap termasuk kereta cepat Haramain, VIP Lounge, dan perlengkapan umroh eksklusif</li>
+                                <li>Pelayanan <strong>amanah dan transparan</strong> — tidak ada biaya tersembunyi</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="bagaimana cara menghubungi agen resmi khairo tours whatsapp kontak nomor">
+                        <summary class="faq-item__q">
+                            <span>Bagaimana cara menghubungi agen resmi Khairo Tours?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Anda dapat menghubungi agen resmi kami:</p>
+                            <ul>
+                                <li><strong>Lina Mardiyana</strong> (Agen Resmi) — <a href="https://wa.me/6282114757075" target="_blank">+62 821-1475-7075</a></li>
+                                <li><strong>Kantor Pusat</strong> — <a href="https://wa.me/6287780820008" target="_blank">+62 877-8082-0008</a></li>
+                            </ul>
+                            <p>Semua komunikasi dan pembayaran hanya melalui nomor resmi di atas. Nomor di luar daftar ini bukan agen resmi kami.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="apakah haji plus tersedia khairo tours visa haji">
+                        <summary class="faq-item__q">
+                            <span>Apakah Khairo Tours melayani Haji Plus?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Kami melayani <strong>Haji Plus</strong> dengan fasilitas premium — hotel bintang 5 di depan Haram, tanpa antrian panjang bertahun-tahun.</p>
+                            <p>Kuota sangat terbatas. Silakan hubungi agen untuk informasi ketersediaan dan harga terbaru.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="umum-legalitas" data-cari="pertanyaan belum terjawab kemana konsultasi gratis">
+                        <summary class="faq-item__q">
+                            <span>Pertanyaan saya belum terjawab di sini, harus ke mana?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Silakan hubungi agen kami langsung melalui WhatsApp untuk <strong>konsultasi gratis</strong>:</p>
+                            <ul>
+                                <li><a href="https://wa.me/6282114757075?text=Assalamualaikum%20Kak%20Lina,%20saya%20ingin%20bertanya%20seputar%20umroh" target="_blank">Chat Lina Mardiyana</a></li>
+                            </ul>
+                            <p>Kami siap membantu Anda kapan saja.</p>
+                        </div>
+                    </details>
+
+                    <!-- ===== PENDAFTARAN & PEMBAYARAN ===== -->
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="bagaimana cara mendaftar umroh khairo tours daftar registrasi">
+                        <summary class="faq-item__q">
+                            <span>Bagaimana cara mendaftar umroh di Khairo Tours?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ada dua cara yang sama-sama resmi:</p>
+                            <ul>
+                                <li>Pilih paket di halaman <a href="packages.html">Paket Umroh</a>, lalu klik tombol WhatsApp pada paket yang diinginkan</li>
+                                <li>Hubungi langsung agen kami Lina Mardiyana di <a href="https://wa.me/6282114757075" target="_blank">+62 821-1475-7075</a></li>
+                            </ul>
+                            <p>Agen akan membantu memilih paket, menjelaskan jadwal, dan mengirimkan rincian pendaftaran.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="berapa uang muka dp deposit mendaftar umroh">
+                        <summary class="faq-item__q">
+                            <span>Berapa uang muka (DP) untuk mendaftar?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Silakan hubungi agen kami untuk informasi nominal DP terkini, karena besaran DP dapat berbeda tergantung paket yang dipilih.</p>
+                            <p>Setelah DP diterima, seat Anda akan didaftarkan pada jadwal keberangkatan yang dipilih.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="apakah bisa membayar bertahap cicil angsuran setelah dp">
+                        <summary class="faq-item__q">
+                            <span>Apakah bisa membayar bertahap setelah DP?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Bisa. Setelah membayar DP, sisa biaya dapat dicicil secara bertahap selama lunas <strong>paling lambat 1 bulan sebelum keberangkatan</strong>.</p>
+                            <p>Skema angsuran disesuaikan dengan jarak waktu keberangkatan — silakan diskusikan dengan agen saat mendaftar.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="kapan batas akhir pelunasan pembayaran lunas">
+                        <summary class="faq-item__q">
+                            <span>Kapan batas akhir pelunasan?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Pelunasan paling lambat <strong>1 bulan sebelum keberangkatan</strong>. Batas yang sama berlaku untuk pendaftaran baru — pendaftaran kurang dari sebulan sebelum berangkat mengikuti ketersediaan seat dan visa.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="kemana transfer pembayaran rekening bank nomor rekening">
+                        <summary class="faq-item__q">
+                            <span>Ke mana saya harus mentransfer pembayaran?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Pembayaran hanya ke <strong>rekening resmi atas nama perusahaan</strong> yang diinformasikan oleh agen resmi Khairo Tours.</p>
+                            <p><strong>Jangan pernah mentransfer ke rekening pribadi</strong> yang mengatasnamakan Khairo Tours. Bila ragu, konfirmasi ulang lewat nomor agen resmi kami sebelum melakukan pembayaran.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="bagaimana ketentuan pembatalan refund pengembalian dana batal">
+                        <summary class="faq-item__q">
+                            <span>Bagaimana ketentuan pembatalan dan pengembalian dana (refund)?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Apabila terjadi pembatalan secara sepihak oleh jamaah, pengembalian dana mengikuti syarat dan ketentuan yang berlaku. Dana yang sudah dibayarkan <strong>tidak dapat dikembalikan 100%</strong>, karena sebagian biaya sudah dibayarkan ke pihak ketiga (tiket, visa, hotel).</p>
+                            <p>Untuk detail ketentuan, silakan tanyakan langsung ke agen kami.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="pendaftaran-pembayaran" data-cari="apakah harga paket bisa berubah setelah mendaftar kurs regulasi">
+                        <summary class="faq-item__q">
+                            <span>Apakah harga paket bisa berubah setelah saya mendaftar?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Bisa. Harga dan program dapat berubah sewaktu-waktu mengikuti <strong>regulasi Pemerintah Arab Saudi dan Indonesia</strong>, serta kebijakan hotel dan maskapai.</p>
+                            <p>Setiap perubahan yang memengaruhi paket Anda akan diinformasikan agen sebelum pelunasan.</p>
+                        </div>
+                    </details>
+
+                    <!-- ===== DOKUMEN & PERSYARATAN ===== -->
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="dokumen apa saja harus disiapkan syarat umroh berkas">
+                        <summary class="faq-item__q">
+                            <span>Dokumen apa saja yang harus saya siapkan?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Berkas wajib untuk keberangkatan umroh:</p>
+                            <ul>
+                                <li>Paspor yang masih berlaku <strong>minimal 1 tahun</strong> saat keberangkatan, dengan nama minimal dua suku kata</li>
+                                <li>Pasfoto ukuran <strong>3×6 sebanyak 4 lembar</strong> (cetak dan softcopy, background putih)</li>
+                                <li>Fotokopi surat nikah bagi suami dan istri</li>
+                                <li>Fotokopi kartu keluarga (KK) bagi anak yang berangkat bersama orang tua</li>
+                                <li>Buku kuning suntik meningitis <strong>asli</strong></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="berapa lama paspor harus berlaku masa berlaku paspor">
+                        <summary class="faq-item__q">
+                            <span>Berapa lama paspor harus berlaku?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Paspor harus <strong>masih berlaku minimal 1 tahun</strong> pada saat keberangkatan. Bila masa berlakunya kurang dari itu, perpanjang lebih dulu di kantor imigrasi sebelum proses visa dimulai.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="nama paspor satu kata bisa berangkat umroh penambahan suku kata">
+                        <summary class="faq-item__q">
+                            <span>Nama di paspor saya hanya satu kata, apakah bisa berangkat?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Nama pada paspor harus <strong>minimal dua suku kata</strong>. Bila nama Anda hanya satu kata, lakukan penambahan suku kata di kantor imigrasi terlebih dahulu — umumnya dengan menambahkan nama ayah atau kakek.</p>
+                            <p>Urus hal ini <strong>sedini mungkin</strong> karena prosesnya memerlukan waktu tersendiri di luar jadwal keberangkatan.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="apakah suntik meningitis wajib vaksin meningitis buku kuning">
+                        <summary class="faq-item__q">
+                            <span>Apakah suntik meningitis wajib?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Jamaah wajib menyerahkan <strong>buku kuning suntik meningitis asli</strong> sebagai syarat keberangkatan.</p>
+                            <p>Biaya suntik meningitis <strong>tidak termasuk dalam harga paket</strong> dan diurus masing-masing jamaah di fasilitas kesehatan yang ditunjuk pemerintah.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="berapa lama sebelum berangkat dokumen diserahkan batas waktu penyerahan">
+                        <summary class="faq-item__q">
+                            <span>Berapa lama sebelum berangkat dokumen harus diserahkan?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Serahkan dokumen selengkap-lengkapnya bersamaan dengan pelunasan, yaitu <strong>paling lambat 1 bulan sebelum keberangkatan</strong>.</p>
+                            <p>Proses visa umroh membutuhkan paspor asli, jadi dokumen yang terlambat berisiko menggeser jadwal keberangkatan Anda.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="dokumen-persyaratan" data-cari="jamaah wanita harus berangkat bersama mahram peraturan arab saudi">
+                        <summary class="faq-item__q">
+                            <span>Apakah jamaah wanita harus berangkat bersama mahram?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ketentuan mahram mengikuti <strong>regulasi terbaru Pemerintah Arab Saudi</strong>, yang dapat berubah sewaktu-waktu. Karena itu, tanyakan kondisi terbaru ke agen sebelum mendaftar.</p>
+                            <p>Dalam setiap keberangkatan, rombongan jamaah wanita tetap didampingi tim pendamping Khairo Tours.</p>
+                        </div>
+                    </details>
+
+                    <!-- ===== PAKET & FASILITAS ===== -->
+                    <details class="faq-item" data-kat="paket-fasilitas" data-cari="apa saja termasuk dalam paket umroh fasilitas include">
+                        <summary class="faq-item__q">
+                            <span>Apa saja yang sudah termasuk dalam paket umroh?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Fasilitas yang sudah termasuk dalam paket:</p>
+                            <ul>
+                                <li>Pesawat pulang-pergi dan visa umroh</li>
+                                <li>Hotel di Makkah dan Madinah (bintang 4 & 5)</li>
+                                <li>Kereta cepat Haramain dan bus full AC</li>
+                                <li>Pembimbing ibadah & muthawwif berpengalaman</li>
+                                <li>Manasik umroh sebelum keberangkatan</li>
+                                <li>City tour Makkah, Madinah, dan Thaif</li>
+                                <li>Perlengkapan umroh eksklusif, handling, air zam-zam</li>
+                                <li>Makan 3× sehari</li>
+                            </ul>
+                            <p>Rincian per paket dapat berbeda — cek halaman <a href="packages.html">Paket Umroh</a> untuk daftar lengkap tiap paket.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="paket-fasilitas" data-cari="apa saja belum termasuk harga paket exclude tidak include">
+                        <summary class="faq-item__q">
+                            <span>Apa saja yang belum termasuk dalam harga paket?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Harga paket <strong>belum termasuk</strong>:</p>
+                            <ul>
+                                <li>Pembuatan paspor dan suntik meningitis</li>
+                                <li>Biaya kelebihan bagasi</li>
+                                <li>Pengeluaran pribadi (oleh-oleh, laundry, komunikasi)</li>
+                                <li>Program tambahan di luar paket yang dipilih</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="paket-fasilitas" data-cari="apa saja pilihan paket tersedia umroh hemat thaif turkiye safar">
+                        <summary class="faq-item__q">
+                            <span>Apa saja pilihan paket yang tersedia?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Paket kami tersedia dalam beberapa pilihan:</p>
+                            <ul>
+                                <li><strong>Umrah Thaif</strong> — 9 hari, termasuk city tour Thaif & kereta cepat</li>
+                                <li><strong>Umrah Safar</strong> — 9 hari, dengan extra tour Thaif + kereta cepat</li>
+                                <li><strong>Umrah Mabrur</strong> — 12 hari, eksklusif dengan bimbingan intensif</li>
+                                <li><strong>Umrah Turkiye</strong> — 12 hari, umroh plus wisata Istanbul & Turki</li>
+                                <li><strong>Umroh Hemat</strong> — 9 hari, paket terjangkau dengan fasilitas lengkap</li>
+                                <li><strong>Haji Plus</strong> — Konsultasi langsung untuk info harga</li>
+                            </ul>
+                            <p>Lihat detail harga di halaman <a href="packages.html">Paket Umroh</a>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="paket-fasilitas" data-cari="apakah saya mendapat perlengkapan umroh koper ihram mukena batik">
+                        <summary class="faq-item__q">
+                            <span>Apakah saya mendapat perlengkapan umroh?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Perlengkapan umroh sudah termasuk dalam paket, meliputi koper, kain ihram, mukena, batik resmi, buku doa, bersama air zam-zam sebagai kenang-kenangan perjalanan ibadah Anda.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="paket-fasilitas" data-cari="kamar hotel tipe apa quad triple double">
+                        <summary class="faq-item__q">
+                            <span>Kamar hotel tipe apa yang saya dapat?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Tersedia tipe <strong>quad (4 orang)</strong>, <strong>triple (3 orang)</strong>, dan <strong>double (2 orang)</strong> sesuai paket yang dipilih. Jumlah tempat tidur pada tiap tipe menyesuaikan ketersediaan hotel.</p>
+                            <p>Konsultasikan kebutuhan tipe kamar dengan agen saat mendaftar.</p>
+                        </div>
+                    </details>
+
+                    <!-- ===== KEBERANGKATAN & IBADAH ===== -->
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="dari bandara mana keberangkatan starting jakarta embarkasi">
+                        <summary class="faq-item__q">
+                            <span>Dari bandara mana keberangkatannya?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Keberangkatan utama <strong>dari Bandara Soekarno-Hatta (Jakarta)</strong>. Jamaah dari kota lain dapat menambahkan layanan handling tiket dari wilayah asal ke Jakarta sebagai add-on.</p>
+                            <p>Silakan informasikan kota asal Anda ke agen agar biaya tambahan dapat dihitung sejak awal.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="apakah ada city tour selama di tanah suci makkah madinah thaif">
+                        <summary class="faq-item__q">
+                            <span>Apakah ada city tour selama di Tanah Suci?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Paket kami mencakup <strong>city tour Makkah, Madinah, dan Thaif</strong> untuk mengunjungi tempat-tempat bersejarah bersama pembimbing.</p>
+                            <p>Lokasi yang dikunjungi antara lain: Jabal Tsur, Jabal Rahmah, Mina, Masjid Quba, Jabal Uhud, Kebun Kurma, dan lain-lain.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="apakah jamaah didampingi pembimbing ibadah muthawwif ustadz">
+                        <summary class="faq-item__q">
+                            <span>Apakah jamaah didampingi pembimbing ibadah selama perjalanan?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Setiap rombongan didampingi <strong>pembimbing ibadah dan muthawwif berpengalaman</strong>, sehingga pertanyaan seputar tata cara ibadah bisa langsung dijawab di tempat.</p>
+                            <p>Sebelum berangkat, jamaah juga mengikuti <strong>manasik umroh</strong> yang sudah termasuk dalam paket.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="apakah manasik umroh diadakan sebelum keberangkatan bimbingan">
+                        <summary class="faq-item__q">
+                            <span>Apakah manasik umroh diadakan sebelum keberangkatan?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Ya. Manasik umroh sudah <strong>termasuk paket</strong> dan wajib diikuti agar jamaah memahami tata cara ibadah, alur perjalanan, serta hal-hal teknis selama di Tanah Suci.</p>
+                            <p>Jadwal dan lokasi manasik akan diinformasikan agen menjelang keberangkatan.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="bagaimana jika sakit atau terpisah dari rombongan di tanah suci darurat">
+                        <summary class="faq-item__q">
+                            <span>Bagaimana jika saya sakit atau terpisah dari rombongan di Tanah Suci?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Setiap rombongan didampingi tour leader dan muthawwif yang siap membantu, termasuk mengantar ke fasilitas kesehatan bila diperlukan.</p>
+                            <p>Tips penting:</p>
+                            <ul>
+                                <li>Simpan nomor tour leader di ponsel Anda</li>
+                                <li>Kenakan identitas rombongan (gelang/kartu jamaah)</li>
+                                <li>Catat nama dan lokasi hotel</li>
+                                <li>Bila terpisah, tetap di tempat aman dan segera hubungi tour leader</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" data-kat="keberangkatan-ibadah" data-cari="apakah jamaah lanjut usia lansia bisa ikut umroh kursi roda">
+                        <summary class="faq-item__q">
+                            <span>Apakah jamaah lanjut usia bisa ikut umroh?</span>
+                            <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="faq-item__a">
+                            <p>Bisa, selama kondisi kesehatannya memungkinkan untuk melakukan perjalanan jauh dan rangkaian ibadah umroh.</p>
+                            <p>Sampaikan kondisi kesehatan atau kebutuhan khusus (kursi roda, obat rutin, riwayat penyakit) kepada agen <strong>sejak pendaftaran</strong> agar pendampingan bisa disiapkan sejak awal.</p>
+                        </div>
+                    </details>
+
+                    <!-- Empty State -->
+                    <div class="faq-empty" id="faqEmpty">
+                        <i class="fas fa-search-minus"></i>
+                        <p>Tidak ditemukan pertanyaan untuk pencarian "<span id="emptyKeyword"></span>".</p>
+                        <p style="margin-top:8px; font-size:.82rem; color:#999;">Coba kata kunci lain atau hubungi agen kami langsung.</p>
+                    </div>
+
+                </div><!-- /faq-grid -->
+
+                <!-- CTA Section -->
+                <div class="faq-cta-wrap">
+                    <p class="faq-eyebrow" style="color:var(--faq-gold)"><i class="fas fa-headset"></i> Masih Ada Pertanyaan?</p>
+                    <h2>Konsultasi Gratis dengan <span style="color:var(--faq-gold)">Agen Resmi</span> Kami</h2>
+                    <p>Tim agen kami siap membantu Anda memilih paket terbaik dan menjawab semua pertanyaan seputar umroh dan haji. Hubungi sekarang, gratis!</p>
+                    <div class="faq-cta__btns">
+                        <a href="https://wa.me/6282114757075?text=Assalamualaikum%20Kak%20Lina,%20saya%20ingin%20konsultasi%20seputar%20umroh%20Khairo%20Tours"
+                            target="_blank" class="faq-cta__btn faq-cta__btn--wa">
+                            <i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang
+                        </a>
+                        <a href="tel:+6282114757075" class="faq-cta__btn faq-cta__btn--outline">
+                            <i class="fas fa-phone"></i> +62 821-1475-7075
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /container -->
+        </section>
+
+    </div><!-- /faq-page -->
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo-khairo.png" alt="Logo KHAIRO TOURS & TRAVELS">
+                    <h3>KHAIRO TOURS & TRAVELS</h3>
+                    <p>Biro perjalanan ibadah resmi, amanah, dan terpercaya untuk Umroh dan Haji Plus Anda.</p>
+                    <p style="font-size:.72rem; color:rgba(255,255,255,.4); margin-bottom:16px;">SK PPIU No. 1153/2019 | Anggota AMPHURI</p>
+                    <div class="footer-social">
+                        <a href="https://www.tiktok.com/@khairohajiumrah" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/khairo.tour.travel" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/travelumrohkhairo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6282114757075" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navigasi</h4>
+                    <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                    <a href="services.html"><i class="fas fa-chevron-right"></i> Layanan</a>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Paket Umroh</a>
+                    <a href="airlines.html"><i class="fas fa-chevron-right"></i> Maskapai</a>
+                    <a href="hotels.html"><i class="fas fa-chevron-right"></i> Hotel</a>
+                    <a href="gallery.html"><i class="fas fa-chevron-right"></i> Galeri</a>
+                    <a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimoni</a>
+                    <a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Paket</h4>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Umrah Thaif</a>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Umrah Safar</a>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Umrah Mabrur</a>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Umrah Turkiye</a>
+                    <a href="packages.html"><i class="fas fa-chevron-right"></i> Haji Plus</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kontak Agen</h4>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Lina Mardiyana<br>+62 821-1475-7075</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Kantor: +62 877-8082-0008</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>khairotourtravel.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 <a href="index.html">KHAIRO TOURS & TRAVELS</a>. Semua hak dilindungi. |
+                    Izin Kemenag RI — SK PPIU No. 1153/2019
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== WA Float ====== -->
+    <div class="wa-float">
+        <a href="https://wa.me/6282114757075?text=Assalamualaikum%20Kak%20Lina,%20saya%20ingin%20konsultasi%20paket%20umroh%20Khairo%20Tours"
+            target="_blank" aria-label="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Sekarang</span>
+        </a>
+    </div>
+
+    <!-- ====== Back to Top ====== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ====== JavaScript ====== -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // ========== Page Loader ==========
+        const loader = document.getElementById('pageLoader');
+        window.addEventListener('load', () => {
+            setTimeout(() => loader.classList.add('hidden'), 600);
+        });
+
+        // ========== Navbar Scroll ==========
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+        }, { passive: true });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ========== Mobile Menu ==========
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks   = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // ========== FAQ Search ==========
+        const searchInput = document.getElementById('faq-cari');
+        const searchClear = document.getElementById('searchClear');
+        const emptyEl     = document.getElementById('faqEmpty');
+        const emptyKw     = document.getElementById('emptyKeyword');
+        let activeKat     = 'all';
+
+        function filterFAQ() {
+            const keyword = searchInput.value.trim().toLowerCase();
+            const items   = document.querySelectorAll('.faq-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const matchKat  = activeKat === 'all' || item.dataset.kat === activeKat;
+                const matchText = !keyword || item.dataset.cari.includes(keyword);
+                const show      = matchKat && matchText;
+                item.style.display = show ? '' : 'none';
+                if (!show) item.open = false;
+                if (show) visibleCount++;
+            });
+
+            // Empty state
+            if (visibleCount === 0) {
+                emptyEl.classList.add('visible');
+                emptyKw.textContent = keyword || '';
+            } else {
+                emptyEl.classList.remove('visible');
+            }
+
+            // Clear button
+            if (keyword) {
+                searchClear.classList.add('visible');
+            } else {
+                searchClear.classList.remove('visible');
+            }
+        }
+
+        searchInput.addEventListener('input', filterFAQ);
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            searchClear.classList.remove('visible');
+            filterFAQ();
+            searchInput.focus();
+        });
+
+        // ========== Category Chips ==========
+        const chips = document.querySelectorAll('.faq-chip');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('is-active');
+                    c.setAttribute('aria-pressed', 'false');
+                });
+                chip.classList.add('is-active');
+                chip.setAttribute('aria-pressed', 'true');
+                activeKat = chip.dataset.kat;
+                filterFAQ();
+            });
+        });
+
+    });
+    </script>
+
+</body>
+</html>
