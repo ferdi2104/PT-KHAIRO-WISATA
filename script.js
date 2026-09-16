@@ -127,18 +127,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== Counter Animation ==========
     const counters = document.querySelectorAll('.counter-animate');
 
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                animateCounter(counter, target);
-                counterObserver.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.5 });
+    if ('IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    animateCounter(counter, target);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
 
-    counters.forEach(counter => counterObserver.observe(counter));
+        counters.forEach(counter => counterObserver.observe(counter));
+    } else {
+        counters.forEach(counter => {
+            counter.textContent = parseInt(counter.getAttribute('data-target')).toLocaleString('id-ID');
+        });
+    }
 
     function animateCounter(element, target) {
         let current = 0;
@@ -245,12 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========== Parallax on Hero ==========
-    const heroBg = document.querySelector('.hero-bg img');
+    const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             if (scrollY < window.innerHeight) {
-                heroBg.style.transform = `scale(1.1) translateY(${scrollY * 0.3}px)`;
+                heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
             }
         }, { passive: true });
     }

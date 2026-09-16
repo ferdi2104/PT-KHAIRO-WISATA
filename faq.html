@@ -667,9 +667,12 @@
         window.addEventListener('scroll', () => {
             if (window.scrollY > 60) {
                 navbar.classList.add('scrolled');
-                backToTop.classList.add('visible');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
                 backToTop.classList.remove('visible');
             }
         }, { passive: true });
