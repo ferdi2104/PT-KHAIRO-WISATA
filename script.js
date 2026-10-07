@@ -74,30 +74,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========== Mobile Menu ==========
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+    function closeMenu() {
+        if (!menuToggle || !navLinks) return;
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
 
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+    if (menuToggle && navLinks) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
-    });
 
-    // Close mobile menu on outside click
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-    });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuToggle.classList.contains('active')) {
+                closeMenu();
+                menuToggle.focus();
+            }
+        });
+    }
 
     // ========== Back to Top ==========
     backToTop.addEventListener('click', () => {
@@ -183,52 +194,86 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ========== Gallery Lightbox ==========
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxClose = document.getElementById('lightboxClose');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    let lastFocusedElement = null;
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // ========== Service Image Click-to-Zoom ==========
-    const serviceImgs = document.querySelectorAll('.service-img');
-    serviceImgs.forEach(serviceImg => {
-        serviceImg.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const img = serviceImg.querySelector('img');
-            if (img) {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
+    function openModal(img, trigger) {
+        if (!lightbox || !lightboxImg || !img) return;
+        lastFocusedElement = trigger || document.activeElement;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (lightboxClose) lightboxClose.focus();
     }
 
-    lightboxClose.addEventListener('click', closeLightbox);
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
+    function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
         }
+    }
+
+    window.openLightbox = (img, trigger) => {
+        openModal(img, trigger);
+    };
+
+    const setupInteractiveTarget = (el, getImg) => {
+        if (!el) return;
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('role', 'button');
+        const trigger = (e) => {
+            if (e && e.stopPropagation) e.stopPropagation();
+            const img = getImg(el);
+            if (img) openModal(img, el);
+        };
+        el.addEventListener('click', trigger);
+        el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                trigger(e);
+            }
+        });
+    };
+
+    galleryItems.forEach(item => {
+        setupInteractiveTarget(item, (el) => el.querySelector('img'));
     });
 
+    const serviceImgs = document.querySelectorAll('.service-img');
+    serviceImgs.forEach(serviceImg => {
+        setupInteractiveTarget(serviceImg, (el) => el.querySelector('img'));
+    });
+
+    document.querySelectorAll('.agent-id-card').forEach(card => {
+        setupInteractiveTarget(card, (el) => el.querySelector('img'));
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        lightbox.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                if (lightboxClose) lightboxClose.focus();
+            }
+        });
+    }
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
             closeLightbox();
         }
     });
@@ -298,16 +343,4 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transitionDelay = `${index * 0.1}s`;
     });
 
-
 });
-
-// ========== Global Lightbox (dipanggil inline dari HTML) ==========
-window.openLightbox = (img) => {
-    const lbox = document.getElementById('lightbox');
-    const lboxImg = document.getElementById('lightboxImg');
-    if (!lbox || !lboxImg || !img) return;
-    lboxImg.src = img.src;
-    lboxImg.alt = img.alt;
-    lbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-};

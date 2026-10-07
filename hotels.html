@@ -41,6 +41,7 @@
 </head>
 
 <body>
+    <a class="skip-link visually-hidden" href="#main">Lompat ke konten utama</a>
 
     <!-- ====== Page Loader ====== -->
     <div class="page-loader" id="pageLoader">
@@ -54,7 +55,7 @@
             <a href="index.html" class="nav-brand" id="navBrand">
                 <img src="images/logo-khairo.png" alt="Logo KHAIRO TOURS & TRAVELS">
                 <div class="nav-brand-text">
-                    <h1>KHAIRO TOURS & TRAVELS</h1>
+                    <span class="nav-brand-name">KHAIRO TOURS & TRAVELS</span>
                     <span>Haji Plus & Umroh</span>
                 </div>
             </a>
@@ -71,7 +72,7 @@
                 <a href="contact.html" class="nav-cta"><i class="fab fa-whatsapp"></i> Hubungi Agen</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -79,6 +80,7 @@
         </div>
     </nav>
 
+    <main id="main">
     <!-- ====== Page Hero ====== -->
     <section class="page-hero">
         <div class="container">
@@ -241,7 +243,7 @@
                 </p>
                 <div class="cta-buttons">
                     <a href="https://wa.me/6282114757075?text=Assalamualaikum%20Kak%20Lina,%20saya%20ingin%20konsultasi%20paket%20umroh"
-                        target="_blank" class="btn btn-wa">
+                        target="_blank" class="btn btn-wa" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang
                     </a>
                     <a href="tel:+6282114757075" class="btn btn-outline">
@@ -251,6 +253,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- ====== Footer ====== -->
     <footer class="footer">
@@ -262,13 +266,13 @@
                     <p>Solusi perjalanan ibadah umroh dan haji yang amanah, nyaman, dan berkualitas. Resmi berizin
                         Kementerian Agama RI.</p>
                     <div class="footer-social">
-                        <a href="https://web.facebook.com/khairotourtravel/" target="_blank" aria-label="Facebook">
+                        <a href="https://web.facebook.com/khairotourtravel/" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/travelumrohkhairo/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/travelumrohkhairo/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@khairo_umrahhaji29" target="_blank" aria-label="TikTok">
+                        <a href="https://www.tiktok.com/@khairo_umrahhaji29" target="_blank" aria-label="TikTok" rel="noopener noreferrer">
                             <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
@@ -311,7 +315,7 @@
                         <span>
                             Website Resmi:<br>
                             <a href="https://khairotourtravel.com" target="_blank"
-                                style="color: var(--gold-500);">khairotourtravel.com</a>
+                                style="color: var(--gold-500);" rel="noopener noreferrer">khairotourtravel.com</a>
                         </span>
                     </div>
                 </div>
@@ -319,7 +323,7 @@
 
             <div class="footer-bottom">
                 <p>
-                    &copy; 2025 <a href="https://khairotourtravel.com" target="_blank">KHAIRO TOURS & TRAVELS</a> -
+                    &copy; 2025 <a href="https://khairotourtravel.com" target="_blank" rel="noopener noreferrer">KHAIRO TOURS & TRAVELS</a> -
                     PT. Khairo Wisata. All rights reserved.
                     <br>Agent Page by Lina Mardiyana
                 </p>
@@ -330,20 +334,20 @@
     <!-- ====== WhatsApp Float ====== -->
     <div class="wa-float">
         <a href="https://wa.me/6282114757075?text=Assalamualaikum%20Kak%20Lina,%20saya%20ingin%20info%20paket%20umroh"
-            target="_blank" aria-label="Chat WhatsApp">
+            target="_blank" aria-label="Chat WhatsApp" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
             <span>Chat Sekarang</span>
         </a>
     </div>
 
     <!-- ====== Back to Top ====== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- ====== Lightbox ====== -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Tutup pratinjau gambar">
             <i class="fas fa-times"></i>
         </button>
         <img src="" alt="Gallery Image" id="lightboxImg">
