@@ -28,6 +28,15 @@
           "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
         }
       ]
+    },
+    {
+      "source": "/(.*)\\.(css|js|mjs|jpg|jpeg|png|gif|svg|webp|avif|ico|woff|woff2|eot|ttf|otf)$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=2592000, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }
