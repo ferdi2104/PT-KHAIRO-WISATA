@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('pageLoader');
     window.addEventListener('load', () => {
         setTimeout(() => {
-            loader.classList.add('hidden');
+            if (loader) loader.classList.add('hidden');
         }, 800);
     });
 
@@ -21,17 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollY = window.scrollY;
 
         // Navbar background
-        if (scrollY > 60) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
 
         // Back to top visibility
-        if (scrollY > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+        if (backToTop) {
+            if (scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
         }
 
         // Active nav link based on section
@@ -111,9 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========== Back to Top ==========
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // ========== Scroll Reveal Animations ==========
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
@@ -283,9 +289,10 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') return;
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const navHeight = navbar.offsetHeight;
+                const navHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = targetElement.offsetTop - navHeight;
                 window.scrollTo({
                     top: targetPosition,

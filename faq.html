@@ -724,13 +724,14 @@
         // ========== Page Loader ==========
         const loader = document.getElementById('pageLoader');
         window.addEventListener('load', () => {
-            setTimeout(() => loader.classList.add('hidden'), 600);
+            setTimeout(() => loader && loader.classList.add('hidden'), 600);
         });
 
         // ========== Navbar Scroll ==========
         const navbar = document.getElementById('navbar');
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
+            if (!navbar || !backToTop) return;
             if (window.scrollY > 60) {
                 navbar.classList.add('scrolled');
             } else {
@@ -742,15 +743,46 @@
                 backToTop.classList.remove('visible');
             }
         }, { passive: true });
-        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        if (backToTop) {
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
 
         // ========== Mobile Menu ==========
         const menuToggle = document.getElementById('menuToggle');
         const navLinks   = document.getElementById('navLinks');
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
+
+        function closeMenu() {
+            if (!menuToggle || !navLinks) return;
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        if (menuToggle && navLinks) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.addEventListener('click', () => {
+                const isOpen = menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && menuToggle.classList.contains('active')) {
+                    closeMenu();
+                    menuToggle.focus();
+                }
+            });
+        }
 
         // ========== FAQ Search ==========
         const searchInput = document.getElementById('faq-cari');
@@ -759,14 +791,23 @@
         const emptyKw     = document.getElementById('emptyKeyword');
         let activeKat     = 'all';
 
+        function normalizeText(str) {
+            return str.toLowerCase().replace(/\s+/g, ' ').trim();
+        }
+
+        // Cache haystack per item: data-cari + teks yang benar-benar tampil (pertanyaan + jawaban).
+        const searchableItems = Array.from(document.querySelectorAll('.faq-item')).map(item => ({
+            el: item,
+            haystack: normalizeText((item.dataset.cari || '') + ' ' + item.textContent)
+        }));
+
         function filterFAQ() {
-            const keyword = searchInput.value.trim().toLowerCase();
-            const items   = document.querySelectorAll('.faq-item');
+            const keyword = normalizeText(searchInput.value);
             let visibleCount = 0;
 
-            items.forEach(item => {
+            searchableItems.forEach(({ el: item, haystack }) => {
                 const matchKat  = activeKat === 'all' || item.dataset.kat === activeKat;
-                const matchText = !keyword || item.dataset.cari.includes(keyword);
+                const matchText = !keyword || haystack.includes(keyword);
                 const show      = matchKat && matchText;
                 item.style.display = show ? '' : 'none';
                 if (!show) item.open = false;
