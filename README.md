@@ -4,7 +4,7 @@ Website resmi agen **Lina Mardiyana** dari PT. Khairo Wisata, penyedia paket Umr
 
 🔗 **Live:** https://agenkhairo.my.id
 
-> 📊 Total commit: <!-- commit-count -->**17**
+> 📊 Total commit: <!-- commit-count -->**18**
 > 🔄 Angka di atas otomatis diperbarui oleh git hook setiap kali commit baru dibuat.
 
 ---
@@ -49,6 +49,21 @@ Cek keamanan:
 ```bash
 python security_check.py https://agenkhairo.my.id
 ```
+
+Script ini auditing 4 hal:
+
+1. **Transport** — apakah `http://` dialihkan ke `https://`, masa berlaku sertifikat SSL, dan apakah subdomain `www` punya sertifikat yang cocok.
+2. **Header wajib** — 6 header di atas diperiksa di **semua** halaman (dibaca dari `sitemap.xml`), bukan cuma halaman depan.
+3. **CSP secara nyata** — CSP tidak hanya dicek "ada atau tidak", tapi diuji dengan membaca setiap `<script>`, `<link rel=stylesheet>`, `<img>`, `<iframe>` yang benar-benar dipakai halaman, lalu dicocokkan ke directive-nya. File font yang dirujuk di dalam stylesheet juga ikut diperiksa. Tujuannya: memastikan CSP tidak memblokir aset situs sendiri.
+4. **Cache aset statis** — memastikan CSS/JS/gambar punya cache jangka panjang di CDN.
+
+Exit code `0` = bersih, `1` = ada temuan, `2` = salah pemakaian. Bisa dipakai sebagai gerbang sebelum deploy:
+
+```bash
+python security_check.py https://agenkhairo.my.id || echo "perbaiki dulu sebelum deploy"
+```
+
+Butuh hanya pustaka standar Python — tidak ada `pip install`.
 
 ---
 
