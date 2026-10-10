@@ -2,7 +2,7 @@
 
 Website resmi agen **Lina Mardiyana** dari PT. Khairo Wisata, penyedia paket Umroh & Haji Plus terpercaya berizin Kemenag RI (SK PPIU No. 1153/2019).
 
-🔗 **Live:** https://khairo-tours.vercel.app
+🔗 **Live:** https://agenkhairo.my.id
 
 ---
 
@@ -44,7 +44,7 @@ Security headers aktif via `vercel.json`:
 
 Cek keamanan:
 ```bash
-python security_check.py https://khairo-tours.vercel.app
+python security_check.py https://agenkhairo.my.id
 ```
 
 ---
@@ -53,4 +53,10 @@ python security_check.py https://khairo-tours.vercel.app
 
 **Lina Mardiyana**
 📱 +62 821-1475-7075
-🌐 https://khairotourtravel.com
+🌐 https://agenkhairo.my.id
+
+Social:
+- Facebook: https://www.facebook.com/linamardiyana
+- Instagram: https://www.instagram.com/mardiyana/
+
+> Situs resmi perusahaan: https://khairotourtravel.com
