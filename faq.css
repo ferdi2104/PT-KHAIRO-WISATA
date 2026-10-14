@@ -84,7 +84,7 @@
   color: #fff;
   transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
 }
-.faq-search__input::placeholder { color: rgba(255,255,255,.45); }
+.faq-search__input::placeholder { color: rgba(255,255,255,.68); }
 .faq-search__input:focus {
   outline: none;
   border-color: var(--faq-gold);
@@ -267,6 +267,11 @@
   margin-bottom: 12px;
 }
 .faq-empty p { margin: 0; font-size: .9rem; }
+.faq-empty__hint {
+  margin-top: 8px !important;
+  font-size: .82rem;
+  color: #5a5f68;
+}
 
 /* ================================================================
    CTA SECTION
@@ -364,11 +369,14 @@
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 4px;
-    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    /* Fade di tepi kanan = petunjuk visual bahwa masih ada kategori di luar layar.
+       Tanpa ini, konten hanya terjangkau lewat scroll yang tak terlihat. */
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent 100%);
     -webkit-overflow-scrolling: touch;
   }
-  .faq-chips::-webkit-scrollbar { display: none; }
-  .faq-chip { flex: 0 0 auto; padding: 7px 14px; font-size: .75rem; }
+  .faq-chip { flex: 0 0 auto; padding: 7px 14px; font-size: .75rem; scroll-snap-align: start; }
   .faq-item__q { padding: 14px 16px; font-size: .88rem; }
   .faq-item__a { margin: 0 16px; }
   .faq-cta-wrap { padding: 36px 22px; border-radius: 14px; }

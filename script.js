@@ -5,6 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ========== Preferensi Gerak ==========
+    // CSS sudah mematikan animasinya, tapi motion yang dijalankan JS
+    // (parallax, smooth scroll, tilt) harus dimatikan sendiri di sini.
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const prefersReducedMotion = () => motionQuery.matches;
+
     // ========== Page Loader ==========
     const loader = document.getElementById('pageLoader');
     window.addEventListener('load', () => {
@@ -117,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== Back to Top ==========
     if (backToTop) {
         backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
         });
     }
 
@@ -142,15 +148,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========== Counter Animation ==========
+    // Angka tetap dihitung (memang data), tapi tanpa menghitung naik
+    // bila pengguna meminta reduced motion — nilai akhir langsung tampil.
     const counters = document.querySelectorAll('.counter-animate');
 
-    if ('IntersectionObserver' in window) {
+    const showFinalValue = (counter) => {
+        counter.textContent = parseInt(counter.getAttribute('data-target'), 10).toLocaleString('id-ID');
+    };
+
+    if (prefersReducedMotion()) {
+        counters.forEach(showFinalValue);
+    } else if ('IntersectionObserver' in window) {
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const counter = entry.target;
-                    const target = parseInt(counter.getAttribute('data-target'));
-                    animateCounter(counter, target);
+                    animateCounter(counter, parseInt(counter.getAttribute('data-target'), 10));
                     counterObserver.unobserve(counter);
                 }
             });
@@ -158,9 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         counters.forEach(counter => counterObserver.observe(counter));
     } else {
-        counters.forEach(counter => {
-            counter.textContent = parseInt(counter.getAttribute('data-target')).toLocaleString('id-ID');
-        });
+        counters.forEach(showFinalValue);
     }
 
     function animateCounter(element, target) {
@@ -181,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== Hero Particles ==========
     const particlesContainer = document.getElementById('heroParticles');
-    if (particlesContainer) {
+    if (particlesContainer && !prefersReducedMotion()) {
         createParticles();
     }
 
@@ -296,15 +307,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetPosition = targetElement.offsetTop - navHeight;
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion() ? 'auto' : 'smooth'
                 });
             }
         });
     });
 
     // ========== Parallax on Hero ==========
+    // better-accessibility: under reduced motion, kill parallax entirely.
     const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
+    if (heroBg && !prefersReducedMotion()) {
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             if (scrollY < window.innerHeight) {
@@ -314,25 +326,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========== Package Card Tilt Effect ==========
-    const packageCards = document.querySelectorAll('.package-card');
+    // Dikenakan lewat custom property, bukan inline transform, supaya
+    // .package-card:hover (translateY) tidak kalah oleh inline style.
+    if (!prefersReducedMotion()) {
+        const packageCards = document.querySelectorAll('.package-card');
 
-    packageCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
+        packageCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const rotateX = (y - rect.height / 2) / 20;
+                const rotateY = (rect.width / 2 - x) / 20;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                card.style.setProperty('--tilt-x', `${rotateX.toFixed(2)}deg`);
+                card.style.setProperty('--tilt-y', `${rotateY.toFixed(2)}deg`);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--tilt-x', '0deg');
+                card.style.setProperty('--tilt-y', '0deg');
+            });
         });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-    });
+    }
 
     // ========== Typing Effect on Hero Badge ==========
     const heroBadge = document.querySelector('.hero-badge');

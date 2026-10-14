@@ -85,7 +85,7 @@
   border:1px solid rgba(255,255,255,.1);
   border-radius:var(--r-xl);
   padding:32px;
-  transition:all var(--dur) var(--ease);
+  transition:border-color,box-shadow var(--dur) var(--ease);
 }
 .contact-card:hover{border-color:var(--gold-400);box-shadow:var(--shadow-gold)}
 .contact-card h3{
@@ -111,7 +111,7 @@
   width:42px;height:42px;border-radius:50%;
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
   color:var(--white);display:flex;align-items:center;justify-content:center;
-  transition:all var(--dur);
+  transition:background-color,color,border-color,transform var(--dur);
 }
 .contact-social a:hover{background:var(--gold-500);color:var(--green-900);transform:translateY(-3px)}
 
