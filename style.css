@@ -612,7 +612,17 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   padding:64px 0 0;
 }
 .footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1.4fr;gap:48px;margin-bottom:48px}
-.footer-brand img{height:44px;margin-bottom:12px}
+.footer-brand-logo{
+  display:block;
+  width:52px;height:52px;
+  padding:10px;margin:0 0 16px;
+  background:var(--white);
+  border-radius:15px;
+  object-fit:contain;
+  box-shadow:0 8px 20px rgba(0,0,0,.28);
+  transition:transform var(--dur), box-shadow var(--dur);
+}
+.footer-brand-logo:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.34)}
 .footer-brand h3{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:10px}
 .footer-brand p{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:20px}
 .footer-social{display:flex;gap:10px}
