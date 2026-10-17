@@ -568,6 +568,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .gallery-item{
   position:relative;overflow:hidden;border-radius:var(--r-md);
   cursor:pointer;border:1px solid rgba(255,255,255,.08);
+  /* item galeri bisa berupa <div> atau <button>;Samakan agar gaya konsisten */
+  display:block;width:100%;padding:0;background:none;
+  font:inherit;color:inherit;text-align:inherit;
 }
 .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
@@ -578,7 +581,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   display:flex;align-items:center;justify-content:center;
   opacity:0;transition:opacity var(--dur);
 }
-.gallery-item:hover .gallery-icon{opacity:1}
+/* penanda "bisa diperbesar" harus muncul juga saat difokuskan lewat keyboard,
+   bukan hanya saat kursor diarahkan */
+.gallery-item:hover .gallery-icon,
+.gallery-item:focus-visible .gallery-icon{opacity:1}
 .gallery-icon i{color:var(--gold-400);font-size:1.3rem}
 
 /* ---- Testimonials ---- */

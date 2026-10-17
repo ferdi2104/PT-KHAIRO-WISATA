@@ -242,8 +242,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setupInteractiveTarget = (el, getImg) => {
         if (!el) return;
-        el.setAttribute('tabindex', '0');
-        el.setAttribute('role', 'button');
+        // <button> asli sudah bisa difokuskan dan diaktifkan Enter/Space,
+        // jadi tidak perlu tabindex/role manual. Elemen lain tetap butuh.
+        const isNativeButton = el.tagName === 'BUTTON' || el.tagName === 'A';
+        if (!isNativeButton) {
+            el.setAttribute('tabindex', '0');
+            el.setAttribute('role', 'button');
+        }
         const trigger = (e) => {
             if (e && e.stopPropagation) e.stopPropagation();
             const img = getImg(el);
@@ -251,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         el.addEventListener('click', trigger);
         el.addEventListener('keydown', (e) => {
+            if (isNativeButton) return;
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 trigger(e);
