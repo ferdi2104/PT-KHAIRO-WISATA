@@ -1,0 +1,176 @@
+[
+  {
+    "id": "hemat",
+    "nama": "Paket Umroh Hemat",
+    "durasi": "9 hari",
+    "harga": 28500000,
+    "hargaTeks": "Rp 28.500.000",
+    "kategori": "umroh",
+    "tag": [
+      "murah",
+      "hemat",
+      "paling murah",
+      "ekonomis",
+      "termurah",
+      "budget",
+      "diskon"
+    ],
+    "maskapai": "Saudi Airlines",
+    "hotel": "Hotel bintang 4 yang nyaman",
+    "fasilitas": [
+      "Pesawat Saudi Airlines",
+      "Hotel bintang 4 yang nyaman",
+      "Makan 3x sehari (catering)",
+      "Manasik umroh sebelum berangkat",
+      "Bus VIP antar kota",
+      "Visa umroh",
+      "Tour leader berpengalaman",
+      "Perlengkapan umroh"
+    ],
+    "catatan": "Paket paling terjangkau. Cocok untuk Californians yang mengutamakan harga."
+  },
+  {
+    "id": "thaif",
+    "nama": "Paket Umrah Thaif",
+    "durasi": "9 hari",
+    "harga": 33500000,
+    "hargaTeks": "Rp 33.500.000",
+    "kategori": "umroh",
+    "tag": [
+      "thaif",
+      "umrah thaif",
+      "kereta cepat",
+      "garuda"
+    ],
+    "maskapai": "Garuda Airlines",
+    "hotel": "Azka Al Safa atau setaraf, dan Sanabel atau setaraf",
+    "fasilitas": [
+      "Pesawat Garuda Airlines",
+      "Hotel Azka Al Safa atau setaraf",
+      "Hotel Sanabel atau setaraf",
+      "Bus executive",
+      "Gratis kereta cepat Haramain",
+      "Gratis city tour Thaif",
+      "Makan 3x sehari",
+      "Gratis air zamzam 5L dan handling"
+    ],
+    "catatan": "Dilengkapi kereta cepat Haramain dan city tour Thaif."
+  },
+  {
+    "id": "safar",
+    "nama": "Paket Umrah Safar",
+    "durasi": "9 hari",
+    "harga": 33500000,
+    "hargaTeks": "Rp 33.500.000",
+    "kategori": "umroh",
+    "tag": [
+      "safar",
+      "umrah safar",
+      "saudia",
+      "perlengkapan"
+    ],
+    "maskapai": "Saudia Airlines",
+    "hotel": "Azka Al Safa atau setaraf",
+    "fasilitas": [
+      "Pesawat Saudia Airlines",
+      "Hotel Azka Al Safa atau setaraf",
+      "Makan 3x sehari (catering)",
+      "Perlengkapan umroh lengkap",
+      "Extra tour Thaif dan kereta cepat",
+      "Manasik umroh intensif",
+      "Bus VIP berstandar",
+      "Muthawif berpengalaman"
+    ],
+    "catatan": "Sudah termasuk Perlengkapan umroh lengkap dan manasik intensif."
+  },
+  {
+    "id": "mabrur",
+    "nama": "Paket Umrah Mabrur",
+    "durasi": "12 hari",
+    "harga": 35500000,
+    "hargaTeks": "Rp 35.500.000",
+    "kategori": "umroh",
+    "tag": [
+      "mabrur",
+      "umrah mabrur",
+      "rekomendasi",
+      "terbaik",
+      "premium"
+    ],
+    "maskapai": "Saudia Airlines",
+    "hotel": "Azka Al Safa atau setaraf",
+    "rekomendasi": true,
+    "fasilitas": [
+      "Pesawat Saudia Airlines",
+      "Hotel Azka Al Safa atau setaraf",
+      "Makan 3x sehari",
+      "Perlengkapan umroh premium",
+      "Extra tour Thaif dan kereta cepat",
+      "Bimbingan ibadah 2x umroh",
+      "City tour Makkah dan Madinah",
+      "Handling bandara dan asuransi"
+    ],
+    "catatan": "Paket rekomendasi kami: paling lengkap dengan durasi 12 hari."
+  },
+  {
+    "id": "turkiye",
+    "nama": "Paket Umrah Turkiye",
+    "durasi": "12 hari",
+    "harga": 36700000,
+    "hargaTeks": "Rp 36.700.000",
+    "kategori": "umroh",
+    "tag": [
+      "turkiye",
+      "turki",
+      "turkis",
+      "istanbul",
+      "salju",
+      "snow",
+      "eropa",
+      "hagia"
+    ],
+    "maskapai": "Turkish Airlines",
+    "hotel": "Grand Al Masa atau setaraf",
+    "fasilitas": [
+      "Pesawat Turkish Airlines",
+      "Hotel Grand Al Masa atau setaraf",
+      "Makan 3x sehari",
+      "Tour Istanbul dan Turkiye",
+      "Pengalaman musim salju (snow experience)",
+      "Visa umroh Turki",
+      "Hagia Sophia dan Blue Mosque",
+      "Perlengkapan umroh eksklusif"
+    ],
+    "catatan": "Menambah_destinasi Turkiye dengan pengalaman musim salju."
+  },
+  {
+    "id": "hajji",
+    "nama": "Paket Haji Plus",
+    "durasi": "Sesuai program",
+    "harga": null,
+    "hargaTeks": "Harga khusus, disseminated lewat konsultasi",
+    "kategori": "haji",
+    "tag": [
+      "haji",
+      "hajj",
+      "hajji",
+      "haji plus",
+      "arrafah",
+      "mina",
+      "mabit"
+    ],
+    "maskapai": "Penerbangan terbaik (dikunci saat pendaftaran)",
+    "hotel": "Hotel bintang 5 premium di depan Masjidil Haram",
+    "fasilitas": [
+      "Tanpa antrian panjang bertahun-tahun",
+      "Hotel bintang 5 premium depan Haram",
+      "Pesawat penerbangan terbaik",
+      "Pembimbing dan ustadz berpengalaman",
+      "Layanan VIP penuh di Arafah dan Mina",
+      "Catering menu Nusantara premium",
+      "Asuransi perjalanan syariah",
+      "Pendampingan resmi sampai kembali"
+    ],
+    "catatan": "Perlu konsultasi langsung karena harga dan kuota Haji Plus menyesuaikan."
+  }
+]

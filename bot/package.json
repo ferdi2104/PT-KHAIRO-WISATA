@@ -1,0 +1,15 @@
+{
+  "name": "bot-khairo-tours",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asisten virtual KHAIRO TOURS & TRAVELS - PT. Khairo Wisata (Fase 1, rule based)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

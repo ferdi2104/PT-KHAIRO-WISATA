@@ -1,0 +1,422 @@
+{
+  "_catatan": "Status 'siap' = sudah represents jawaban asli. Status 'draf' = jawaban PLACEHOLDER yang WAJIB direview Kak Lina sebelum bot dipakai produksi.",
+  "_kontak": {
+    "nama": "Lina Mardiyana",
+    "telepon": "+62 821-1475-7075",
+    "wa": "6282114757075",
+    "website": "https://agenkhairo.my.id",
+    "situsPerusahaan": "https://khairotourtravel.com",
+    "jam": "Senin-Sabtu, 08.00-18.00 WIB"
+  },
+  "faq": [
+    {
+      "id": "legalitas",
+      "kategori": "Umum & Legalitas",
+      "tanya": "Apakah Khairo Tours resmi dan berizin?",
+      "kunci": [
+        "resmi",
+        "berizin",
+        "izin",
+        "kemenag",
+        "legal",
+        "sah",
+        "ppiu",
+        "amphuri",
+        "penghulu",
+        "sk",
+        "sertifikat"
+      ],
+      "jawab": "Ya, Khairo Tours resmi dan berizin.\n\n- Izin Kementerian Agama RI: SK PPIU No. 1153/2019\n- Nama badan usaha: PT. Khairo Wisata\n- Anggota AMPHURI\n\nLegalitas bisa dicek langsung ke Kementerian Agama RI.",
+      "status": "siap"
+    },
+    {
+      "id": "perbedaan",
+      "kategori": "Umum & Legalitas",
+      "tanya": "Apa yang membedakan Khairo Tours dengan travel umroh lain?",
+      "kunci": [
+        "beda",
+        "berbeda",
+        "kenapa",
+        "alasan",
+        "keunggulan",
+        "kelebihan",
+        "lebih baik"
+      ],
+      "jawab": "Keunggulan kami:\n- 15+ tahun pengalaman\n- 5000+ jamaah yang pernah berangkat bersama kami\n- Muthawif dan tour leader berpengalaman\n- Harga transparan: apa yang termasuk dan tidak, kami jelaskan sejak awal\n\nKak Lina akan menjelaskan detailnya kalau Kak mau konsultasi.",
+      "status": "draf"
+    },
+    {
+      "id": "cara-daftar",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Bagaimana cara mendaftar umroh di Khairo Tours?",
+      "kunci": [
+        "daftar",
+        "mendaftar",
+        "pendaftaran",
+        "booking",
+        "pesan paket",
+        "mau ikut"
+      ],
+      "jawab": "Cara mendaftar ada 4 langkah:\n\n1. Chat Kak Lina dan pilih paket yang diinginkan\n2. Isi data diri dan data jamaah\n3. Unggah dokumen yang diminta (KTP, paspor, KK, NPWP)\n4. Transfer DP untuk mengunci peserta\n\nKalau sudah selesai, Kak Lina akan mengirim link pendaftaran.",
+      "status": "draf"
+    },
+    {
+      "id": "dp",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Berapa uang muka (DP) untuk mendaftar?",
+      "kunci": [
+        "dp",
+        "uang muka",
+        "uangmuka",
+        "angsuran pertama",
+        "bayar pertama",
+        "deposit",
+        "down payment"
+      ],
+      "jawab": "Uang muka (DP) adalah langkah pertama untuk mengunci peserta pada keberangkatan.\n\nNominal DP berlaku berbeda tiap paket dan dapat berubah. Silakan hubungi Kak Lina untuk memastikan nominal yang berlaku saat ini.",
+      "status": "draf"
+    },
+    {
+      "id": "cicilan",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Apakah bisa membayar bertahap setelah DP?",
+      "kunci": [
+        "cicil",
+        "cicilan",
+        "bertahap",
+        "angsuran",
+        "bayar sebagian"
+      ],
+      "jawab": "Bisa. Setelah DP, pelunasan dapat dilakukan bertahap sampai batas waktu yang disepakati bersama Kak Lina.\n\nJadwal pembayaran akan dicatat, jadi Kak tidak perlu khawatir.",
+      "status": "draf"
+    },
+    {
+      "id": "pelunasan",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Kapan batas akhir pelunasan?",
+      "kunci": [
+        "pelunasan",
+        "batas akhir",
+        "deadline bayar",
+        "kapan bayar",
+        "jatuh tempo",
+        "pelunasan kapan"
+      ],
+      "jawab": "Batas akhir pelunasan mengikuti jadwal keberangkatan masing-masing keberangkatan.\nUmumnya paling lambat H-30.\n\nUntuk memastikan tanggal pelunasan peserta Anda, mohon konfirmasi langsung ke Kak Lina.",
+      "status": "draf"
+    },
+    {
+      "id": "transfer",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Ke mana saya harus mentransfer pembayaran?",
+      "kunci": [
+        "transfer",
+        "bank",
+        "rekening",
+        "bayar ke mana",
+        "nomor rekening",
+        "cara bayar",
+        "pembayaran",
+        "bisa bayar"
+      ],
+      "jawab": "Pembayaran melalui transfer ke rekening atas nama PT. Khairo Wisata.\n\nNomor rekening lengkap diberikan Kak Lina setelah Anda terdaftar sebagai peserta.\n\nDemi keamanan, mohon hanya transfer ke nomor rekening yang dikonfirmasi langsung oleh Kak Lina.",
+      "status": "draf"
+    },
+    {
+      "id": "refund",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Bagaimana ketentuan pembatalan dan pengembalian dana (refund)?",
+      "kunci": [
+        "refund",
+        "pembatalan",
+        "batal",
+        "cancel",
+        "uang kembali",
+        "pengembalian",
+        "dikembalikan",
+        "ganti"
+      ],
+      "jawab": "Ketentuan pembatalan dan refund mengikuti ketentuan umroh sesuai tahap waktu pembatalan, serta ketentuan maskapai dan pihak ketiga terkait.\n\nKarena nominal refund berbeda tiap tahap waktu, kasus ini perlu dihitung satu per satu oleh Kak Lina.\n\nMohon chat Kak Lina supaya bisa dihitung tepat untuk peserta Anda.",
+      "status": "draf"
+    },
+    {
+      "id": "harga-berubah",
+      "kategori": "Pendaftaran & Pembayaran",
+      "tanya": "Apakah harga paket bisa berubah setelah saya mendaftar?",
+      "kunci": [
+        "harga berubah",
+        "naik",
+        "ubah harga",
+        "harga naik",
+        "biaya tambahan",
+        "inflasi",
+        "biaya naik"
+      ],
+      "jawab": "Harga bisa berubah secara wajar, misalnya karena kenaikan tarif maskapai, layanan, atau nilai tukar.\n\nPrinsip kami transparan: jika ada kenaikan, Anda diberi tahu sebelum incurred.\n\nUntuk memastikan harga yang berlaku saat ini, mohon hubungi Kak Lina.",
+      "status": "draf"
+    },
+    {
+      "id": "dokumen",
+      "kategori": "Dokumen & Persyaratan",
+      "tanya": "Dokumen apa saja yang harus saya siapkan?",
+      "kunci": [
+        "dokumen",
+        "syarat",
+        "persyaratan",
+        "berkas",
+        "butuh dokumen",
+        "persyaratan apa",
+        "berkas apa",
+        "siapkan apa"
+      ],
+      "jawab": "Dokumen yang perlu disiapkan:\n\n- Paspor masih berlaku minimal 6 bulan\n- Scan KTP asli\n- Scan Kartu Keluarga\n- Scan NPWP\n- Foto formal 3x4 (latar merah)\n- Buku tabungan (untuk umroh)\n\nUntuk Haji Plus, dokumen dan persyaratannya menyesuaikan ketentuan Recreation Haji yang berlaku.",
+      "status": "draf"
+    },
+    {
+      "id": "paspor",
+      "kategori": "Dokumen & Persyaratan",
+      "tanya": "Berapa lama paspor harus berlaku?",
+      "kunci": [
+        "paspor",
+        "masa berlaku paspor",
+        "paspor berlaku",
+        "paspor habis",
+        "expire",
+        "ketentuan paspor"
+      ],
+      "jawab": "Paspor harus berlaku minimal 6 bulan sejak tanggal keberangkatan.\n\nPeserta yang belum pernah Umroh perlu Gam322. Peserta yang sudah pernah Umroh boleh membawa paspor yang sama.",
+      "status": "draf"
+    },
+    {
+      "id": "nama-satu-kata",
+      "kategori": "Dokumen & Pers严格要求",
+      "tanya": "Nama di paspor saya hanya satu kata, apakah bisa berangkat?",
+      "kunci": [
+        "nama satu kata",
+        "hanya satu kata",
+        "nama paspor",
+        "nama singkat",
+        "satu kata"
+      ],
+      "jawab": "Nama di paspor harus sesuai dengan KTP dan terdiri minimal dua kata.\n\nJika nama Anda di paspor hanya satu kata, perlu diperbaiki lebih dulu di Kantor Imigrasi.\n\nMohon kabari nama lengkap Anda agar kami bisa bantu arahkan langkahnya.",
+      "status": "draf"
+    },
+    {
+      "id": "suntik",
+      "kategori": "Dokumen & Persyaratan",
+      "tanya": "Apakah suntik meningitis wajib?",
+      "kunci": [
+        "suntik",
+        "meningitis",
+        "vaksin"
+      ],
+      "jawab": "Vaksin meningitis tidak lagi menjadi syarat wajib, namun tetap kami rekomendasikan.\n\nSuntik meningitis berlaku 2 tahun dan gratis di sending centre umroh di Madinah.",
+      "status": "draf"
+    },
+    {
+      "id": "batas-dokumen",
+      "kategori": "Dokumen & Persyaratan",
+      "tanya": "Berapa lama sebelum berangkat dokumen harus diserahkan?",
+      "kunci": [
+        "batas dokumen",
+        "deadline dokumen",
+        "kapan upload",
+        "kirim dokumen",
+        "kapan dokumen",
+        "serahkan dokumen"
+      ],
+      "jawab": "Dokumen perlu diserahkan paling lambat H-45 sebelum keberangkatan.\n\nPeserta yang belum melengkapi berisiko tidak dapat joining Cartoon.\n\nKak Lina juga mengirim pengingat otomatis ke peserta yang belum melengkapi.",
+      "status": "draf"
+    },
+    {
+      "id": "mahram",
+      "kategori": "Dokumen & Persyaratan",
+      "tanya": "Apakah jamaah wanita harus berangkat bersama mahram?",
+      "kunci": [
+        "mahram",
+        "wanita",
+        "perempuan",
+        "suami",
+        "tanpa mahram"
+      ],
+      "jawab": "Peserta wanita di bawah 45 tahun disarankan berangkat bersama mahram.\n\nBila belum ada mahram, ketentuan mengikuti kebijakan Recreation Umroh yang berlaku saat itu.\n\nSilakan hubungi Kak Lina untuk memastikan ketentuan terbaru.",
+      "status": "draf"
+    },
+    {
+      "id": "termasuk",
+      "kategori": "Paket & Fasilitas",
+      "tanya": "Apa saja yang sudah termasuk dalam paket umroh?",
+      "kunci": [
+        "fasilitas apa",
+        "fasilitas paket",
+        "mengandung apa",
+        "apa saja fasilitas"
+      ],
+      "jawab": "Umumnya sudah termasuk:\n\n- Tiket pesawat PP\n- Hotel sesuai ketentuan paket\n- Transportasi bus antar kota\n- Makan sesuai jadwal\n- Manasik umroh\n- Visa umroh\n- Tour leader dan pembimbing\n\nFasilitas spesifik tiap paket berbeda. Ketik \"daftar paket\" untuk melihat rincian setiap paket.",
+      "status": "draf"
+    },
+    {
+      "id": "tidak-termasuk",
+      "kategori": "Paket & Fasilitas",
+      "tanya": "Apa saja yang belum termasuk dalam harga paket?",
+      "kunci": [
+        "tidak termasuk",
+        "belum termasuk",
+        "biaya tambahan",
+        "diluar paket",
+        "tidak dicakup"
+      ],
+      "jawab": "Yang biasanya belum termasuk:\n\n- Itikaf umroh dan manasik tambahan\n- Umroh wajib bagi peserta yang sudah pernah umroh\n- Umroh qadha\n- Tips pemandu\n- Biaya pribadi\n\nKak Lina akan menjelaskan rinci per paket sebelum Anda daftar.",
+      "status": "draf"
+    },
+    {
+      "id": "daftar-paket",
+      "kategori": "Paket & Fasilitas",
+      "tanya": "Apa saja pilihan paket yang tersedia?",
+      "kunci": [
+        "daftar paket",
+        "pilihan paket",
+        "paket apa saja",
+        "list paket",
+        "semua paket",
+        "katalog",
+        "paket yang ada",
+        "paket apa"
+      ],
+      "jawab": "special",
+      "status": "siap"
+    },
+    {
+      "id": "perlengkapan",
+      "kategori": "Paket & Fasilitas",
+      "tanya": "Apakah saya mendapat perlengkapan umroh?",
+      "kunci": [
+        "perlengkapan",
+        "perlengkapan umroh",
+        "dapat perlengkapan",
+        "perlengkapan sudah termasuk"
+      ],
+      "jawab": "Sebagian besar paket sudah termasuk perlengkapan umroh:\n\n- Umroh Hemat: perlengkapan umroh\n- Safar: perlengkapan lengkap\n- Mabrur: perlengkapan premium\n- Turkiye: perlengkapan eksklusif\n\nPerlengkapan diterima saat proses manasik sebelum keberangkatan.",
+      "status": "draf"
+    },
+    {
+      "id": "kamar-hotel",
+      "kategori": "Paket & Fasilitas",
+      "tanya": "Kamar hotel tipe apa yang saya dapat?",
+      "kunci": [
+        "hotel",
+        "kamar",
+        "tipe kamar",
+        "double",
+        "triple",
+        "quad",
+        "menginap"
+      ],
+      "jawab": "Tipe kamar menyesuaikan paket dan ketersediaan:\n\n- Umroh Hemat: hotel bintang 4\n- Thaif dan Safar: hotel Azka Al Safa atau setaraf\n- Mabrur: hotel Azka Al Safa atau setaraf\n- Turkiye: hotel Grand Al Masa atau setaraf\n- Haji Plus: hotel bintang 5 premium\n\nTipe kamar yang pasti (double, triple, atau quad) ditentukan saat pendaftaran.",
+      "status": "draf"
+    },
+    {
+      "id": "bandara",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Dari bandara mana keberangkatannya?",
+      "kunci": [
+        "bandara",
+        "keberangkatan dari",
+        "berangkat dari",
+        "airport",
+        "pelabuhan"
+      ],
+      "jawab": "Keberangkatan biasanya dari Bandara Soekarno-Hatta (Jakarta), atau bandara yang paling dekat dengan jumlah peserta untuk efisiensi charter.\n\nBandara yang dipakai dikonfirmasi saat detail keberangkatan diumumkan. Peserta dari luar Jakarta akan dibantu koneksi transportasinya.",
+      "status": "draf"
+    },
+    {
+      "id": "city-tour",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Apakah ada city tour selama di Tanah Suci?",
+      "kunci": [
+        "city tour",
+        "keliling",
+        "atraksi",
+        "istanbul"
+      ],
+      "jawab": "Ya, ada city tour sesuai paket:\n\n- Thaif dan Safar: city tour Thaif + kereta cepat Haramain\n- Mabrur: city tour Makkah dan Madinah\n- Turkiye: tour Istanbul dan Turkiye + pengalaman musim salju\n\nSemua tour tersebut sudah termasuk dalam harga paket.",
+      "status": "draf"
+    },
+    {
+      "id": "pembimbing",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Apakah jamaah didampingi pembimbing ibadah selama perjalanan?",
+      "kunci": [
+        "pembimbing",
+        "muthawif",
+        "ustadz",
+        "pendamping",
+        "guide",
+        "pemandu",
+        "leader",
+        "tour leader"
+      ],
+      "jawab": "Ya, setiap Cartoon Umroh selalu didampingi:\n\n- Muthawif (pemandu ibadah) berpengalaman\n- Tour leader\n- Paket Mabrur: bimbingan ibadah 2x umroh\n- Paket Safar: manasik umroh intensif\n\nPembimbing Pendamping Anda dari keberangkatan hingga kepulangan.",
+      "status": "draf"
+    },
+    {
+      "id": "manasik",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Apakah manasik umroh diadakan sebelum keberangkatan?",
+      "kunci": [
+        "manasik",
+        "bimbingan",
+        "persiapan",
+        "manasik umroh",
+        "training",
+        "briefing"
+      ],
+      "jawab": "Ya, manasik umroh diadakan untuk seluruh peserta sebelum keberangkatan:\n\n- Paket Hemat: manasik sebelum berangkat\n- Paket Safar: manasik umroh intensif\n- Paket Mabrur dan Turkiye: bimbingan ibadah di Tanah Suci\n\nManasik juga menjadi waktu bagi peserta untuk berdiskusi dengan muthawif.",
+      "status": "draf"
+    },
+    {
+      "id": "sakit-terpisah",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Bagaimana jika saya sakit atau terpisah dari rombongan di Tanah Suci?",
+      "kunci": [
+        "sakit",
+        "terpisah",
+        "hilang",
+        "lost",
+        "kehilangan",
+        "darurat"
+      ],
+      "jawab": "Semua pesertaolia dengan:\n\n- Asuransi perjalanan untuk Umroh\n- Kontak muthawif yang selalu bisa dihubungi\n- Navigasi bersama kelompok\n\nJika terjadi kondisi darurat, keluarga akan diberi tahu dan prosesnya ditangani sesuai ketentuan yang berlaku.",
+      "status": "draf"
+    },
+    {
+      "id": "lansia",
+      "kategori": "Keberangkatan & Ibadah",
+      "tanya": "Apakah jamaah lanjut usia bisa ikut umroh?",
+      "kunci": [
+        "lansia",
+        "lanjut usia",
+        "usia lanjut",
+        "usia tua"
+      ],
+      "jawab": "Bisa. Peserta lanjut usia dapat horrid dengan ketentuan:\n\n- Umroh: umumnya sampai usia 75 tahun dengan kondisi kesehatan yang baik\n- Haji Plus: ketentuan usia mengikuti ketentuan Recreation Haji yang berlaku\n\nPeserta dengan kondisi medis khusus disarankan consult Klinik terlebih dahulu dan menyertakan surat keterangan dokter saat pendaftaran.",
+      "status": "draf"
+    },
+    {
+      "id": "hubungi",
+      "kategori": "Umum & Legalitas",
+      "tanya": "Bagaimana cara menghubungi agen resmi Khairo Tours?",
+      "kunci": [
+        "kontak",
+        "hubungi",
+        "telp",
+        "telepon",
+        "nomor",
+        "whatsapp",
+        "operator"
+      ],
+      "jawab": "special",
+      "status": "siap"
+    }
+  ]
+}
