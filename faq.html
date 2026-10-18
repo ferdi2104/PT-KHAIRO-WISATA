@@ -760,7 +760,12 @@
             }
         }, { passive: true });
         if (backToTop) {
-            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            // Hormati prefers-reduced-motion, sama seperti script.js di halaman lain.
+            const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            backToTop.addEventListener('click', () => window.scrollTo({
+                top: 0,
+                behavior: motionQuery.matches ? 'auto' : 'smooth'
+            }));
         }
 
         // ========== Mobile Menu ==========
