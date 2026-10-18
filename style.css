@@ -246,6 +246,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   color:var(--gold-400);margin-bottom:16px;opacity:.95;
   text-shadow:0 2px 8px rgba(0,0,0,.3);
 }
+/* Naskah Arab belum diisi, jadi jangan sisakan celah kosong di hero. */
+.hero-arabic:empty{display:none}
 .hero h1,
 .hero h2{
   font-size:clamp(2.4rem,6vw,3.8rem);
