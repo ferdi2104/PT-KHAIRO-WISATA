@@ -4,7 +4,12 @@ const { paket, faq, kontak, matchIntent, matchPaket, matchFaq, normalize } = req
 const { tokenize, dedupeTokens } = require('./normalize');
 
 const WA_KAKLINA = `https://wa.me/${kontak.wa}`;
-const WA_BOT = `https://wa.me/${kontak.wa}`;
+
+// Ambang kemenangan antara FAQ dan intent umum.
+// Diukur dari data: intent 'harga' yang kuat bernilai 2 (mis. "berapa harga"),
+// sedangkan FAQ yang cuma cocok satu token bernilai 1 dan belum layak menang.
+const SKOR_FAQ_STRONG = 2;
+const SKOR_INTENT_STRONG = 2;
 
 function salam() {
   return `Assalamualaikum Kak, selamat datang di KHAIRO TOURS & TRAVELS. Ada yang bisa kami bantu?`;
@@ -136,17 +141,28 @@ function jawab(pesan) {
     return { tipe: 'paket', teks: detailPaket(p.paket) };
   }
 
-  // FAQ lebih didahulukan daripada intent umum,
-  // supaya jawaban yang lebih spesifik menang.
+  // FAQ dan intent umum bisa sama-sama cocok untuk satu pesan.
+  //
+  // "berapa harga paket umroh?" -> intent 'harga' skor 2, tapi FAQ
+  // "cara daftar" hanya skor 1 karena cuma cocok satu token. Kalau FAQ-nya
+  // lemah sementara intent-nya kuat, intent yang menang, supaya pertanyaan
+  // harga tidak dijawab "cara mendaftar".
+  //
+  // Sebaliknya "berapa uang muka?" tetap dijawab FAQ DP (skor 3.5) dan
+  // "paspor berapa lama berlaku?" tetap dijawab FAQ paspor (skor 2),
+  // jadi FAQ tidak pernah menimpa jawaban yang memang lebih spesifik.
   const f = matchFaq(tokens, teks);
+  const faqKuat = f && f.skor >= SKOR_FAQ_STRONG;
+  const intentKuat = intent && intent.skor >= SKOR_INTENT_STRONG && !faqKuat;
+
+  if (intentKuat && intent.id === 'harga') return { tipe: 'harga', teks: daftarHarga() };
+  if (intentKuat && intent.id === 'durasi') return { tipe: 'durasi', teks: infoDurasi() };
+
   if (f) {
     if (f.item.id === 'daftar-paket') return { tipe: 'daftar_paket', teks: daftarPaket() };
     if (f.item.id === 'hubungi') return { tipe: 'kontak', teks: infoKontak() };
     return { tipe: 'faq', teks: f.item.jawab };
   }
-
-  if (intent && intent.id === 'harga') return { tipe: 'harga', teks: daftarHarga() };
-  if (intent && intent.id === 'durasi') return { tipe: 'durasi', teks: infoDurasi() };
 
   return { tipe: 'fallback', teks: fallback() };
 }

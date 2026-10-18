@@ -152,7 +152,7 @@
         "inflasi",
         "biaya naik"
       ],
-      "jawab": "Harga bisa berubah secara wajar, misalnya karena kenaikan tarif maskapai, layanan, atau nilai tukar.\n\nPrinsip kami transparan: jika ada kenaikan, Anda diberi tahu sebelum incurred.\n\nUntuk memastikan harga yang berlaku saat ini, mohon hubungi Kak Lina.",
+      "jawab": "Harga bisa berubah secara wajar, misalnya karena kenaikan tarif maskapai, layanan, atau nilai tukar.\n\nPrinsip kami transparan: jika ada kenaikan, Anda diberi tahu sebelum terjadi.\n\nUntuk memastikan harga yang berlaku saat ini, mohon hubungi Kak Lina.",
       "status": "draf"
     },
     {
@@ -169,7 +169,7 @@
         "berkas apa",
         "siapkan apa"
       ],
-      "jawab": "Dokumen yang perlu disiapkan:\n\n- Paspor masih berlaku minimal 6 bulan\n- Scan KTP asli\n- Scan Kartu Keluarga\n- Scan NPWP\n- Foto formal 3x4 (latar merah)\n- Buku tabungan (untuk umroh)\n\nUntuk Haji Plus, dokumen dan persyaratannya menyesuaikan ketentuan Recreation Haji yang berlaku.",
+      "jawab": "Dokumen yang perlu disiapkan:\n\n- Paspor masih berlaku minimal 6 bulan\n- Scan KTP asli\n- Scan Kartu Keluarga\n- Scan NPWP\n- Foto formal 3x4 (latar merah)\n- Buku tabungan (untuk umroh)\n\nUntuk Haji Plus, dokumen dan persyaratannya menyesuaikan ketentuan Regulasi Haji yang berlaku.",
       "status": "draf"
     },
     {
@@ -189,7 +189,7 @@
     },
     {
       "id": "nama-satu-kata",
-      "kategori": "Dokumen & Pers严格要求",
+      "kategori": "Dokumen & Persyaratan",
       "tanya": "Nama di paspor saya hanya satu kata, apakah bisa berangkat?",
       "kunci": [
         "nama satu kata",
@@ -225,7 +225,7 @@
         "kapan dokumen",
         "serahkan dokumen"
       ],
-      "jawab": "Dokumen perlu diserahkan paling lambat H-45 sebelum keberangkatan.\n\nPeserta yang belum melengkapi berisiko tidak dapat joining Cartoon.\n\nKak Lina juga mengirim pengingat otomatis ke peserta yang belum melengkapi.",
+      "jawab": "Dokumen perlu diserahkan paling lambat H-45 sebelum keberangkatan.\n\nPeserta yang belum melengkapi berisiko tidak dapat ikut berangkat.\n\nKak Lina juga mengirim pengingat otomatis ke peserta yang belum melengkapi.",
       "status": "draf"
     },
     {
@@ -239,7 +239,7 @@
         "suami",
         "tanpa mahram"
       ],
-      "jawab": "Peserta wanita di bawah 45 tahun disarankan berangkat bersama mahram.\n\nBila belum ada mahram, ketentuan mengikuti kebijakan Recreation Umroh yang berlaku saat itu.\n\nSilakan hubungi Kak Lina untuk memastikan ketentuan terbaru.",
+      "jawab": "Peserta wanita di bawah 45 tahun disarankan berangkat bersama mahram.\n\nBila belum ada mahram, ketentuan mengikuti kebijakan Regulasi Umroh yang berlaku saat itu.\n\nSilakan hubungi Kak Lina untuk memastikan ketentuan terbaru.",
       "status": "draf"
     },
     {
@@ -356,7 +356,7 @@
         "leader",
         "tour leader"
       ],
-      "jawab": "Ya, setiap Cartoon Umroh selalu didampingi:\n\n- Muthawif (pemandu ibadah) berpengalaman\n- Tour leader\n- Paket Mabrur: bimbingan ibadah 2x umroh\n- Paket Safar: manasik umroh intensif\n\nPembimbing Pendamping Anda dari keberangkatan hingga kepulangan.",
+      "jawab": "Ya, setiap Umroh selalu didampingi:\n\n- Muthawif (pemandu ibadah) berpengalaman\n- Tour leader\n- Paket Mabrur: bimbingan ibadah 2x umroh\n- Paket Safar: manasik umroh intensif\n\nPembimbing Pendamping Anda dari keberangkatan hingga kepulangan.",
       "status": "draf"
     },
     {
@@ -386,7 +386,7 @@
         "kehilangan",
         "darurat"
       ],
-      "jawab": "Semua pesertaolia dengan:\n\n- Asuransi perjalanan untuk Umroh\n- Kontak muthawif yang selalu bisa dihubungi\n- Navigasi bersama kelompok\n\nJika terjadi kondisi darurat, keluarga akan diberi tahu dan prosesnya ditangani sesuai ketentuan yang berlaku.",
+      "jawab": "Semua peserta mendapat:\n\n- Asuransi perjalanan untuk Umroh\n- Kontak muthawif yang selalu bisa dihubungi\n- Navigasi bersama kelompok\n\nJika terjadi kondisi darurat, keluarga akan diberi tahu dan prosesnya ditangani sesuai ketentuan yang berlaku.",
       "status": "draf"
     },
     {
@@ -399,7 +399,7 @@
         "usia lanjut",
         "usia tua"
       ],
-      "jawab": "Bisa. Peserta lanjut usia dapat horrid dengan ketentuan:\n\n- Umroh: umumnya sampai usia 75 tahun dengan kondisi kesehatan yang baik\n- Haji Plus: ketentuan usia mengikuti ketentuan Recreation Haji yang berlaku\n\nPeserta dengan kondisi medis khusus disarankan consult Klinik terlebih dahulu dan menyertakan surat keterangan dokter saat pendaftaran.",
+      "jawab": "Bisa. Peserta lanjut usia dapat berangkat dengan ketentuan:\n\n- Umroh: umumnya sampai usia 75 tahun dengan kondisi kesehatan yang baik\n- Haji Plus: ketentuan usia mengikuti ketentuan Regulasi Haji yang berlaku\n\nPeserta dengan kondisi medis khusus dis konsultasi lebih dulu ke Klinik terlebih dahulu dan menyertakan surat keterangan dokter saat pendaftaran.",
       "status": "draf"
     },
     {

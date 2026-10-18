@@ -23,8 +23,14 @@ const INTENT = [
     kunci: ['terima kasih', 'makasih', 'thanks', 'thank you', 'jazakumillah', 'jazakallah'],
   },
   {
+    // 'orang', 'agen' dan 'bicara' sengaja TIDAK dipakai lagi sebagai kunci.
+    // Kata itu muncul di kalimat yang bukan permintaan sambungan, misalnya
+    // "paket apa saja untuk orang banyak?" dan "orang tua saya", sehingga
+    // pertanyaan_packages yang punya jawaban jelas ikut dialihkan ke agen.
+    // Frasa 'bicara dengan/sama agen' tetaptertangkap lewat 'lina' atau
+    // lewat tombol handoff di widget.
     id: 'serah_ke_manusia',
-    kunci: ['kak lina', 'lina', 'agen', 'manusia', 'orang', 'bicara', 'komplain', 'keluh', 'marah', 'keberatan', 'tidak puask', 'keberatan'],
+    kunci: ['lina', 'mau bicara', 'bicara sama', 'komplain', 'keluh', 'marah', 'keberatan', 'tidak puask'],
   },
   {
     id: 'harga',

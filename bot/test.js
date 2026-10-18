@@ -32,6 +32,15 @@ const KASUS = [
   ['nomor whatsappnya berapa', 'kontak'],
   ['mau bicara sama kak lina', 'serah'],
   ['asdfghjkl qwertyuiop', 'fallback'],
+
+  // Regresi: FAQ pernah menimpa intent harga, sehingga "berapa harga paket"
+  // dijawab "cara mendaftar". Intent menang hanya kalau skornya kuat
+  // dan FAQ-nya lemah.
+  ['berapa harga paket umroh?', 'harga'],
+  ['berapa harga', 'harga'],
+  ['paket termurah berapa?', 'harga'],
+  // Regresi: "orang" memicu handoff ke agen, padahal pertanyaannya soal paket.
+  ['paket apa saja untuk orang banyak?', 'daftar_paket'],
 ];
 
 let lulus = 0;
@@ -52,7 +61,7 @@ console.log(`Lulus: ${lulus}/${KASUS.length}`);
 if (gagal.length) {
   console.log('\nYang gagal:');
   for (const g of gagal) {
-    console.log(`  "${g.pertanyaan}"Filtered器的 ekspektasi ${g.hope}, dapat ${g.got}`);
+    console.log(`  "${g.pertanyaan}" — ekspektasi ${g.hope}, dapat ${g.got}`);
   }
   process.exitCode = 1;
 } else {

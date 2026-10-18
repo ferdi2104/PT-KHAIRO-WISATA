@@ -141,14 +141,14 @@
       "Hagia Sophia dan Blue Mosque",
       "Perlengkapan umroh eksklusif"
     ],
-    "catatan": "Menambah_destinasi Turkiye dengan pengalaman musim salju."
+    "catatan": "Menambah destinasi Turkiye dengan pengalaman musim salju."
   },
   {
     "id": "hajji",
     "nama": "Paket Haji Plus",
     "durasi": "Sesuai program",
     "harga": null,
-    "hargaTeks": "Harga khusus, disseminated lewat konsultasi",
+    "hargaTeks": "Harga khusus, silakan konsultasi",
     "kategori": "haji",
     "tag": [
       "haji",
