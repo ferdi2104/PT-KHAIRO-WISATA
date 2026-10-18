@@ -4,7 +4,7 @@ Website resmi agen **Lina Mardiyana** dari PT. Khairo Wisata, penyedia paket Umr
 
 🔗 **Live:** https://agenkhairo.my.id
 
-> 📊 Total commit: <!-- commit-count -->**28**
+> 📊 Total commit: <!-- commit-count -->**29**
 > 🔄 Angka di atas otomatis diperbarui oleh git hook setiap kali commit baru dibuat.
 
 ---

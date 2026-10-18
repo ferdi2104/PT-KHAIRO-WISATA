@@ -246,7 +246,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   color:var(--gold-400);margin-bottom:16px;opacity:.95;
   text-shadow:0 2px 8px rgba(0,0,0,.3);
 }
-/* Naskah Arab belum diisi, jadi jangan sisakan celah kosong di hero. */
+/* Pengaman: kalau naskah Arab suatu saat dikosongkan, jangan sisakan celah. */
 .hero-arabic:empty{display:none}
 .hero h1,
 .hero h2{
