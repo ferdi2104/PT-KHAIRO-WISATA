@@ -88,23 +88,40 @@ function matchPaket(tokens, pesan) {
 /**
  * Cari FAQ dengan skor token yang cocok.
  * Bonus tambahan kalau frasa kunci muncul utuh di pesan,
- *misalnya kunci "daftar paket" dan pesannya "ada paket daftar?" ada "daftar paket".
+ * Contoh: kunci "daftar paket" diberi bonus kalau pesan memuat frasa itu utuh.
  */
 function matchFaq(tokens, pesan) {
   const pesanLower = normalize(pesan);
   let terbaik = null;
 
   for (const item of faq) {
-    const kunciTokens = [];
-    for (const k of item.kunci) kunciTokens.push(...tokenize(k));
-    const unik = [...new Set(kunciTokens)];
+    // Peta token -> apakah token itu berasal dari kunci satu kata.
+    // Kunci satu kata dianggap lebih spesifik daripada kunci frasa.
+    const asal = new Map();
+    for (const k of item.kunci) {
+      const satuKata = !normalize(k).includes(' ');
+      for (const t of tokenize(k)) {
+        if (!asal.has(t) || satuKata) asal.set(t, satuKata);
+      }
+    }
+    const unik = [...asal.keys()];
 
     let skor = 0;
     let adaCocokPersis = false;
+    let penuh = 0; // jumlah kunci satu kata yang cocok persis
+
     for (const t of tokens) {
       for (const kt of unik) {
-        if (t === kt) { skor += 1; adaCocokPersis = true; break; }
-        if (t.length > 3 && kt.length > 3 && (kt.includes(t) || t.includes(kt))) { skor += 0.5; break; }
+        if (t === kt) {
+          skor += 1;
+          adaCocokPersis = true;
+          if (asal.get(kt)) penuh += 1;
+          break;
+        }
+        if (t.length > 3 && kt.length > 3 && (kt.includes(t) || t.includes(kt))) {
+          skor += 0.5;
+          break;
+        }
       }
     }
 
@@ -118,11 +135,16 @@ function matchFaq(tokens, pesan) {
       }
     }
 
-    // Tanpa kecocokan persis atau frasa utuh, jangan dianggap cocok.
     if (!adaCocokPersis && !adaFrasa) continue;
+    if (skor < MIN_FAQ_SCORE) continue;
 
-    if (skor >= MIN_FAQ_SCORE && (!terbaik || skor > terbaik.skor)) {
-      terbaik = { item, skor };
+    // seri skor diputuskan lewat kunci yang paling spesifik
+    if (
+      !terbaik ||
+      skor > terbaik.skor ||
+      (skor === terbaik.skor && penuh > terbaik.penuh)
+    ) {
+      terbaik = { item, skor, penuh };
     }
   }
   return terbaik;
